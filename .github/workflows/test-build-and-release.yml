@@ -21,6 +21,8 @@ jobs:
     name: Static analysis
     runs-on: ubuntu-latest
     steps:
+      - name: Install splint
+        run: sudo apt install splint
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Static analysis with splint
